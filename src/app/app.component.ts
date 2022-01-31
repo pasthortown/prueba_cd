@@ -31,7 +31,7 @@ export class AppComponent {
 
         break;
       case 'division':
-        this.resultado = (this.numero2 / this.numero1);
+        this.resultado = (this.numero1 / this.numero2);
         break;
     }
   }
