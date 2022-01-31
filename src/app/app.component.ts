@@ -28,10 +28,10 @@ export class AppComponent {
         break;
       case 'multiplicacion':
         this.resultado = (this.numero1 * this.numero2);
-        
+
         break;
       case 'division':
-        // Tyron
+        this.resultado = (this.numero1 / this.numero2);
         break;
     }
   }
