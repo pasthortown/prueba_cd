@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    tools { nodejs "node16.13" }
+    stages {
+        stage('git') {
+            steps {
+                git branch: 'pruebas', credentialsId: '92f2b4ef-7245-487a-b581-af99797aee6a', url: 'https://github.com/pasthortown/prueba_cd'
+            }
+        }
+        stage('Install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh 'ng build --base-href "http://sitio-pruebas.unibe.com"'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh 'cd /public_html && rm -R pruebas'
+                sh 'cd /public_html && mkdir pruebas'
+                sh 'mv dist/client/* /public_html/pruebas'
+            }
+        }
+    }
+}
