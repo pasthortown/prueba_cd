@@ -28,6 +28,7 @@ export class AppComponent {
         break;
       case 'multiplicacion':
         this.resultado = (this.numero1 * this.numero2);
+        
         break;
       case 'division':
         this.resultado = (this.numero1 / this.numero2);
