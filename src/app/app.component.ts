@@ -27,7 +27,8 @@ export class AppComponent {
         // Josselyn
         break;
       case 'multiplicacion':
-        // Jhon
+        this.resultado = (this.numero1 * this.numero2);
+        
         break;
       case 'division':
         // Tyron
