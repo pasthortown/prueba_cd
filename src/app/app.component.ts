@@ -21,7 +21,7 @@ export class AppComponent {
         }
         break;
       case 'suma':
-        // Magaly
+        this.resultado = (this.numero1 + this.numero2);
         break;
       case 'resta':
         this.resultado = (this.numero1 - this.numero2);
